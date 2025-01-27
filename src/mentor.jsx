@@ -1,5 +1,5 @@
 import React from 'react'
-import pic10 from './assets/images/pic10.avif'
+
 import pic12 from './assets/images/pic12.png'
 import { LinkedinIcon } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'

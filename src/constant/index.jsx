@@ -1,7 +1,7 @@
 
 import man from '../assets/images/man.jpg'
 import hr1 from '../assets/images/hr1.jpg'
-import market1 from '../assets/images/market1.webp'
+import market from '../assets/images/market.webp'
 import techs from '../assets/images/techs.jpg'
 
 import com from '../assets/images/com.jpg'
@@ -65,7 +65,7 @@ const K = {
     INTERNSHIP : [
       
         {
-            pic: [market1],
+            pic: [market],
             title: 'Marketting Internship',
             about: 'Join our marketing team for hands-on experience in digital strategies, campaign development, social media engagement, and performance analysis in a fast-paced environment.',
             link: 'Apply'

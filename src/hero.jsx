@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <div id='home'>
-      <div className='flex justify-center items-center space-x-[8rem] pl-[5rem] pt-[10rem]'>
+      <div className='flex justify-center items-center space-x-[8rem] pl-[7rem] pt-[10rem]'>
 
         <Slide left duration={800} delay={300}>
 

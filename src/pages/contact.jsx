@@ -1,11 +1,46 @@
 import React from 'react'
-import bg3 from '../assets/images/bg3.avif'
+import bg3 from '../assets/images/bg3.jpg'
 import contact from '../assets/images/contacts.jpg'
 import { MapPin, Phone, User } from 'lucide-react'
 import { Slide } from 'react-swift-reveal'
 
 
 const Contact = () => {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "44810d29-bc2f-43be-8af0-f611e475d343");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult(" Message Sent Successfully");
+      event.target.reset();
+
+
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+    }
+  };
 
   return (
 
@@ -30,7 +65,15 @@ const Contact = () => {
 
             <div className="w-full  ">
 
-              <form  className="space-y-5 pb-9 pl-4  bg-[#8874AB] ">
+              <form onSubmit={onSubmit} className="space-y-5 pb-9 pl-4  bg-[#8874AB] ">
+
+                {/* Success Message */}
+                {result && (
+                  <p className=" border w-60 h-11 rounded-lg bg-white shadow-white shadow-md text-[#FB923C] pt-1 font-medium text-center">
+                    {result}
+                  </p>
+                )}
+
                 <h2
                   style={{ fontFamily: 'Playfair' }}
                   className="text-2xl pt-5 text-[#F9F6E6]"
@@ -102,13 +145,19 @@ const Contact = () => {
                     className="w-[37vw] rounded-md border border-[#585757] bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:border-[#715B90] focus:shadow-md"
                   ></textarea>
                 </div>
+
+                    {/* <!-- Hidden input for the predefined subject --> */}
+                    <input type="hidden" name="subject" value="You have a message" />
+
                 <button
                   style={{ fontFamily: 'Playfair' }}
                   className="border border-[#BAD8B6] text-white w-32 h-8 font-semibold hover:bg-[#DA498D] rounded-lg"
+                  type='submit'
                 >
                   Submit
                 </button>
               </form>
+
             </div>
           </div>
 

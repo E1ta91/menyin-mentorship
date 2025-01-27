@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
 import pic2 from './assets/images/pic2.jpg'
-import pic6 from './assets/images/pic6.avif'
-import pic7 from './assets/images/pic7.avif'
-import pic8 from './assets/images/pic8.avif'
-import pic9 from './assets/images/pic9.avif'
+import pic6 from './assets/images/pic6.jpg'
+import pic7 from './assets/images/pic7.jpg'
+import pic8 from './assets/images/pic8.jpg'
+import pic9 from './assets/images/pic9.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 
 
