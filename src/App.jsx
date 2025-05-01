@@ -1,6 +1,5 @@
 
 import './App.css'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './pages/home'
@@ -10,6 +9,7 @@ import Mentor from './pages/mentor'
 import Mentee from './pages/mentee'
 import Opportunity from './pages/opportunity'
 import Contact from './pages/contact'
+import Intern from './pages/intern'
 
 function App() {
   const router = createBrowserRouter([
@@ -23,10 +23,7 @@ function App() {
       path: 'contact',
       element: <Contact/>
     },
-    {
-      path: 'profiles',
-      element: <Profile />
-    },
+   
     {
       path: 'choice',
       element: <Choice/>
@@ -39,18 +36,19 @@ function App() {
       path: 'mentee',
       element: <Mentee/>
     },
+
     {
-      path: 'opportunities',
-      element: <Opportunity/>
-    }
+      path: 'opportunities/internship',
+      element: <Intern/>
+    },
  ] )
 
 
-
-  return (
-    <RouterProvider router={router} />
-
-  )
+ return (
+  <RouterProvider router={router} />
+)
+  
+ 
 }
 
 export default App

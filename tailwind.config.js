@@ -15,7 +15,7 @@ export default {
       },
     },
     animation: {
-      slideRight: 'slideRight 10s linear infinite',
+      slideRight: 'slideRight 9s linear infinite',
     },
   
   },
