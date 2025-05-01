@@ -166,7 +166,7 @@ const Contact = () => {
                 <User className="text-[#A35C7A] 2xl:w-10 2xl:h-10" />
                 <h1 className="text-lg 2xl:text-3xl">General Support</h1>
               </div>
-              <p className="pl-6 text-base 2xl:text-2xl">seguahafricainitiative@gmail.com</p>
+              <p className="pl-6 text-base 2xl:text-2xl">info@seguah.com</p>
             </div>
           </div>
         </motion.div>
