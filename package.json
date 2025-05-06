@@ -3,14 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+ "scripts": {
+  "start": "node server.js",
+  "build": "vite build",
+  "dev": "vite",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
   "dependencies": {
     "emailjs-com": "^3.2.0",
+    "express": "^5.1.0",
     "framer-motion": "^12.4.4",
     "gsap": "^3.12.7",
     "lucide-react": "^0.471.1",
