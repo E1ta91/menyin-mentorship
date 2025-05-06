@@ -2,21 +2,20 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Recreate __dirname in ES module scope
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-// Serve static files from the Vite build
+// Serve static files from dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Catch-all route to serve index.html for SPA
+// All GET requests go to index.html (for React Router)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
